@@ -1,0 +1,57 @@
+Recursion
+
+In your own words, what is recursion?
+
+    Recursion is when a function calls itself. They are useful when you don't know the depth of the data you are working with. The returns cascade as the function calls close in the order they were opened, like russian nesting dolls.
+
+Why is it necessary to have a base case?
+
+    Without a base case, the recursion would never stop! 
+
+Graphs
+
+What is a graph?
+
+    A collection of nodes that are connected with edges and allow for cycles or loops. They can directed or non-directed.
+
+How is a graph different from a tree?
+    Trees cannot have cycles. Graphs can also be weighted so you can make decisions on the 'lowest cost' to get between two nodes, like miles between destinations, you can use weights to determine the best route. 
+
+Give an example of something that would be good to model with a graph.
+    Useful in mapping applications for finding the best possible route to get between two points. Good for checking if nodes are connected, like checking friend connections on social media. 
+
+Performance of Different Data Structures
+
+Fill in the missing spots in the chart with the correct runtimes. Do this by reasoning through how the data structures work, NOT by looking up the solution. Add-R means add to the right/end/top and Add-L means add to the left/beginning/bottom. There are X’s in the spots where that operation doesn’t make sense for that data structure (for instance, you can’t index a stack, or pop from the end of a queue). We’ve provided the first few answers for you.
+
+Fill in the runtimes for the following actions for the table below:
+
+Data Structure                  index   Search  Add-R   Add-L   Pop-L   Pop-R
+Python List (Array)             O(1)    O(n)    O(1)    O(n)    O(n)    O(1)       
+Linked List                     O(n)    O(n)    O(1)    O(1)    O(1)    O(n)
+Doubly-Linked List              O(n)    O(n)    O(1)    O(1)    O(1)    O(1)     
+Queue (as Array)                X       X       O(1)    X       O(n)    X
+Queue (as LL or DLL)            X       X       O(1)    X       O(1)    X
+Stack (as Array, LL, or DLL)    X       X       O(1)    X       X       O(1)
+Deque (as DLL)                  X       X       O(1)    O(1)    O(1)    O(1)
+
+
+
+Data Structure              Get         Add         Delete      Iterate     Memory
+Dictionary (Hash Map)       O(1)        O(1)        O(1)        O(n)        medium
+Set (Hash Map)              O(1)        O(1)        O(1)        O(n)        medium     
+Binary Search Tree          O(log n)    O(log n)    O(log n)    O(n)        a little       
+Tree                        O(n)        O(1)        O(1)        O(n)        a little
+
+
+Sorting
+
+Describe in words how the Bubble Sort algorithm works.
+    A bubble sort works by starting with the first item in the list, and comparing it to the next item in the list. If the first item is larger, it will swap places with the next item. This process continues as the larger values "bubble up" to the end of the list. You will repeat that cycle for the number of items in the list. 
+
+Describe in words how the Merge Sort algorithm works.
+    Merge sort takes in two lists and merges them together. The input lists must be ordered, so the initial step is to break down all the items in the list into single item lists and then merge them back together in order by comparing the first element in each list, putting the lowest value in the front of the list. 
+
+Describe in words how the Quick Sort algorithm works.
+    When using a quicksort, you select a pivot in your list and all values greater than the pivot go in a list, all values lower than the pivot go in a list, and the pivot and anything equal to the pivot go in a list. Those values are then combined, low + eq + high. Usually used in a recurvise way and the list are broken down and rebuilt on the way back up. 
+
