@@ -14,13 +14,9 @@ def print_item(my_list, i=0):
         >>> print_item([])
 
     """
-    # if we have reached the end of the list, stop
-    if i == len(my_list):
-        return 
-    
-    # otherwise print the list item and loop again
-    print my_list[i]
-    print_item(my_list, i + 1)
+    if my_list:
+        print my_list[0]
+        return print_item(my_list[1:], i+1)
 
 
 # 2. Write a function that uses recursion to print each node in a tree.
