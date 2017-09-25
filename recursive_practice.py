@@ -60,15 +60,39 @@ def is_matched(expression):
     print "NO"
     return False
             
-brack_txt = open("brackets.txt").readlines()
-for line in brack_txt:
-    # print line.strip()
-    is_matched(line.strip()) 
+# brack_txt = open("brackets.txt").readlines()
+# for line in brack_txt:
+#     # print line.strip()
+#     is_matched(line.strip()) 
 
-# t = int(raw_input().strip())
-# for a0 in xrange(t):
-#     expression = raw_input().strip()
-#     if is_matched(expression) == True:
-#         print "YES"
-#     else:
-#         print "NO"
+def reverse(string):
+    if len(string) < 2:  
+        return string
+    elif len(string) == 2:
+        return string[1] + string[0]
+    else:
+        return reverse(string[1:]) + string[0]
+
+
+def check_contacts():
+    n = 50000
+    contacts = {}
+    all_text = open('run_text.txt').readlines()
+    for line in all_text:
+        op, contact = line.strip().split(' ')
+        letter = contact[0]
+        if op == "add":
+            # make a dictionary to hold the first letter of each entry
+            # this cuts down on the number of contacts that get checked
+            contacts[contact[0]] = contacts.get(contact[0], []) + [contact]
+            # if i
+            #     contacts[letter].append(contact)
+            # except:
+            #     contacts[letter] = [contact]
+        if op == "find":
+            count = 0
+            if letter in contacts:
+                for word in contacts[letter]:
+                    if word[:len(contact)] == contact:
+                        count += 1
+            print count
